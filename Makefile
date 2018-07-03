@@ -1,9 +1,15 @@
+CC=g++
+RM=rm -rf
+
+SOURCES=main.cpp
+EXECUTABLE=calculator
+
 all: calculator
 
 calculator: main.o
 
 main.o:
-	g++ main.cpp -o calculator
+	$(CC) $(SOURCES) -o $(EXECUTABLE)
 
 clean:
-	rm calculator
+	$(RM) $(EXECUTABLE)
